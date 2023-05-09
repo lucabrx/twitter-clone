@@ -5,6 +5,7 @@ import {ClipLoader} from 'react-spinners';
 import { type FC } from 'react';
 import UserHero from '@/components/users/UserHero';
 import UserBio from '@/components/users/UserBio';
+import PostFeed from '@/components/posts/PostFeed';
 
 interface UserProps {
   
@@ -30,6 +31,7 @@ showBackArrrow
 />
 <UserHero userId={userId as string} />
 <UserBio userId={userId as string} />
+<PostFeed userId={userId as string} />
 </>
 )
 }
