@@ -1,6 +1,7 @@
 import useUsers from '@/hooks/useUsers';
 import { type FC } from 'react';
 import Avatar from '../Avatar';
+import Link from 'next/link';
 
 
 
@@ -19,7 +20,7 @@ const Followbar: FC = ({}) => {
             <div key={user.id} className="flex flex-row gap-4">
               <Avatar userId={user.id} />
               <div className="flex flex-col">
-                <p className="text-white font-semibold text-sm">{user.name}</p>
+                <Link href={`/users/${user.id}`} className="text-white font-semibold text-sm hover:underline">{user.name}</Link>
                 <p className="text-neutral-400 text-sm">@{user.username}</p>
               </div>
             </div>
