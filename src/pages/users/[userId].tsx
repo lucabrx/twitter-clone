@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import {ClipLoader} from 'react-spinners';
 import { type FC } from 'react';
 import UserHero from '@/components/users/UserHero';
+import UserBio from '@/components/users/UserBio';
 
 interface UserProps {
   
@@ -28,6 +29,7 @@ label={fatchedUser.name}
 showBackArrrow
 />
 <UserHero userId={userId as string} />
+<UserBio userId={userId as string} />
 </>
 )
 }
