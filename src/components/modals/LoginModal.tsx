@@ -2,6 +2,7 @@ import useLoginModal from '@/hooks/useLoginModal';
 import { useState, type FC, use, useCallback } from 'react';
 import Input from '../Input';
 import Modal from '../Modal';
+import useRegisterModal from '@/hooks/useRegisterModal';
 
 interface LoginModalProps {
   
@@ -9,6 +10,8 @@ interface LoginModalProps {
 
 const LoginModal: FC<LoginModalProps> = ({}) => {
     const loginModal = useLoginModal();
+    const registerModal = useRegisterModal();
+
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [isLoading, setIsLoading] = useState(false);
@@ -29,8 +32,8 @@ const LoginModal: FC<LoginModalProps> = ({}) => {
 
     const onToggle = useCallback(() => {
         loginModal.onClose();
-        
-      }, [loginModal])
+        registerModal.onOpen();
+      }, [loginModal, registerModal])
     
 
     const bodyContent = (
