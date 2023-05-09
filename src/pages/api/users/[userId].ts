@@ -20,6 +20,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       }
     });
 
+    if (!existingUser) {
+        return res.status(404).json({ message: 'User not found' });
+    }
+
     const followersCount = await prisma.user.count({
       where: {
         followingIds: {
