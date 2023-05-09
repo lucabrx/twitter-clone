@@ -1,10 +1,8 @@
 import { type FC } from 'react';
 
-interface FollowbarProps {
-  
-}
 
-const Followbar: FC<FollowbarProps> = ({}) => {
+
+const Followbar: FC = ({}) => {
   return (
     <div className="px-6 py-4 hidden lg:block">
     <div className="bg-neutral-800 rounded-xl p-4">

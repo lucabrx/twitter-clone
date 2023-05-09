@@ -4,11 +4,9 @@ import Input from '../Input';
 import Modal from '../Modal';
 import useRegisterModal from '@/hooks/useRegisterModal';
 
-interface LoginModalProps {
-  
-}
 
-const RegisterModal: FC<LoginModalProps> = ({}) => {
+
+const RegisterModal: FC = ({}) => {
     const loginModal = useLoginModal();
     const registerModal = useRegisterModal();
 

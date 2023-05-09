@@ -2,11 +2,9 @@ import Link from 'next/link';
 import { type FC } from 'react';
 import { FaFeather } from 'react-icons/fa';
 
-interface SidebarTweetButtonProps {
-  
-}
 
-const SidebarTweetButton: FC<SidebarTweetButtonProps> = ({}) => {
+
+const SidebarTweetButton: FC = ({}) => {
   return (
 <Link href="/"> 
 <div className='mt-6 lg:hidden rounded-full h-14 w-14 p-4 flex items-center justify-center bg-sky-500 hover:bg-opacity-80 transition cursor-pointer'>
