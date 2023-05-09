@@ -3,6 +3,7 @@ import { useState, type FC, use, useCallback } from 'react';
 import Input from '../Input';
 import Modal from '../Modal';
 import useRegisterModal from '@/hooks/useRegisterModal';
+import { signIn } from 'next-auth/react';
 
 
 
@@ -18,7 +19,10 @@ const LoginModal: FC = ({}) => {
         try{
             setIsLoading(true);
             // todo add login logic
-
+            await signIn('credentials', {
+                email,
+                password,
+            })
 
             loginModal.onClose();
         } catch (error) {
@@ -26,7 +30,7 @@ const LoginModal: FC = ({}) => {
         } finally {
             loginModal.onClose();
         }
-    }, [loginModal])
+    }, [loginModal,email, password])
 
     const onToggle = useCallback(() => {
         loginModal.onClose();
