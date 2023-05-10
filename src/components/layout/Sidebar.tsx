@@ -27,7 +27,7 @@ const Sidebar: FC= ({}) => {
       label: 'Notifications',
       href: '/notifications',
       auth: true,
-      
+      alert: currentUser?.hasNotification
     },
     {
       icon: FaUser,
@@ -50,6 +50,7 @@ const Sidebar: FC= ({}) => {
       label={item.label}
       href={item.href}
       auth={item.auth}
+      alert={item.alert}
       />
     ))
   }
