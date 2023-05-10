@@ -42,7 +42,7 @@ const RegisterModal: FC = ({}) => {
         } finally {
             registerModal.onClose();
         }
-    }, [loginModal, email, password, username, name])
+    }, [ email, password, username, name, registerModal])
 
     const onToggle = useCallback(() => {
       registerModal.onClose();
